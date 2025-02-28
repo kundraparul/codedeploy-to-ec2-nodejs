@@ -4,6 +4,8 @@ phases:
   install: 
     runtime-versions:
       nodejs: 18
+    commands:
+      - npm install
   build:
     commands:
       - echo "Package & Dependicies are getting installed"
