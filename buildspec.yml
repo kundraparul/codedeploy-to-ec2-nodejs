@@ -5,10 +5,11 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - echo "Checking Node.js and npm versions"
+      - echo "Checking Node.js version"
       - node -v
+      - echo "Checking npm version"
       - npm -v
-      - echo "Installing npm packages"
+      - echo "Running npm install"
       - npm install || { echo 'npm install failed'; exit 1; }
   build:
     commands:
@@ -19,3 +20,4 @@ artifacts:
   type: zip
   paths:
     - '*'
+
