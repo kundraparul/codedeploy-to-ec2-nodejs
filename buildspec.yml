@@ -13,11 +13,13 @@ phases:
       - npm install || { echo 'npm install failed'; exit 1; }
   build:
     commands:
+      - echo "Starting Build Phase"
       - echo "Packages & Dependencies are getting installed"
       - echo "Packages have been installed"
       - echo "Storing Build Artifact to the Location"
+      - ls -la  # Add this to list files and check for files being available
 artifacts:
   type: zip
   paths:
-    - '*'
+    - 'dist/**/*'  # Specify a more focused path to include only the desired files
 
