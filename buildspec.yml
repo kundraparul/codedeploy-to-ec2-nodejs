@@ -20,6 +20,17 @@ phases:
       - ls -la  # Add this to list files and check for files being available
 artifacts:
   type: zip
-  paths:
-    - '/**/*'  # Specify a more focused path to include only the desired files
+  files:
+    - server.js
+    - package.json
+    - package-lock.json
+    - '**/*.js'
+    - '**/*.json'
+    - '**/*.html'
+    - public/**/*
+    - appspec.yml
+    - afterinstall.sh
+    - applicationstart.sh
+  discard-paths: no
+
 
